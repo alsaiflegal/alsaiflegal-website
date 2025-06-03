@@ -70,7 +70,7 @@ export default async function Links() {
   const links = await client.fetch(linkQuery);
 
   return (
-    <div className="flex flex-col justify-center items-center h-screen p-4 bg-gradient-to-br from-slate-50 to-gray-50 fade-in">
+    <div className="flex flex-col justify-center items-center h-screen text-black p-4 bg-gradient-to-br from-slate-50 to-gray-50 fade-in">
       {/* Logo */}
       <Image
         src="/images/logos/logo.png"
