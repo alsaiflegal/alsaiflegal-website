@@ -1,19 +1,40 @@
-"use client";
-
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
+
+import { Almarai, Rakkas } from "next/font/google";
+
+const almarai = Almarai({
+  subsets: ["arabic"],
+  weight: ["300", "400", "700", "800"],
+  variable: "--font-almarai",
+});
+
+const rakkas = Rakkas({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-rakkas",
+});
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ar" dir="rtl" suppressHydrationWarning>
+    <html
+      lang="ar"
+      dir="rtl"
+      className={`${almarai.variable} ${rakkas.variable}`}
+    >
       <head>
-        <link id="favicon" rel="icon" href="/favicons/favicon-light.ico"/>
-        <title>شركة إبراهيم بن عبدالعزيز السيف</title>
+        <link
+          rel="icon"
+          href="/favicons/favicon-black.ico"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          rel="icon"
+          href="/favicons/favicon-white.ico"
+          media="(prefers-color-scheme: dark)"
+        />
       </head>
-      <body>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+      <body className="font-main bg-offwhite">
+        {children}
       </body>
     </html>
   );
