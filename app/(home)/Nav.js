@@ -33,9 +33,9 @@ export default function Header() {
   }, [isMenuOpen]);
 
   const navLinks = [
-    { href: "#about", label: "عن المكتب" },
+    { href: "#about", label: "عن الشركة" },
     { href: "#services", label: "الخدمات" },
-    { href: "/blogs", label: "المدونة" },
+    { href: "#blog", label: "المدونة" },
     { href: "#contact", label: "تواصل معنا" },
   ];
 

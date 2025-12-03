@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { blogPosts } from "../../data/blogPosts";
@@ -7,8 +5,46 @@ import { notFound } from "next/navigation";
 import Nav from "../../(home)/Nav";
 import Footer from "../../(home)/Footer";
 
-export default function BlogPost({ params }) {
-    const post = blogPosts.find(p => p.slug === params.slug);
+export async function generateMetadata({ params }) {
+    const { slug } = await params;
+    const post = blogPosts.find(p => p.slug === slug);
+
+    if (!post) {
+        return {
+            title: 'المقال غير موجود',
+        }
+    }
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: 'article',
+            publishedTime: post.date,
+            authors: [post.author],
+            images: [
+                {
+                    url: post.image,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                }
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt,
+            images: [post.image],
+        },
+    }
+}
+
+export default async function BlogPost({ params }) {
+    const { slug } = await params;
+    const post = blogPosts.find(p => p.slug === slug);
 
     if (!post) {
         notFound();

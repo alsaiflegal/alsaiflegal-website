@@ -59,7 +59,7 @@ export default function Hero() {
                 data-cal-namespace="30min"
                 data-cal-link="alsaif-legal-k7e91v/30min"
                 data-cal-config='{"layout":"month_view"}'
-                className="relative inline-block bg-gradient-to-br from-gold to-gold-light text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-semibold overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer w-full sm:w-auto"
+                className="relative inline-block bg-gradient-to-br from-gold to-gold-light text-white px-6 md:px-8 py-3 md:py-3.5 rounded-2xl font-semibold overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer w-full sm:w-auto"
               >
                 {/* Animated gradient overlay */}
                 <span className="absolute inset-0 bg-gradient-to-br from-navy via-navy-light to-navy opacity-0 group-hover/hero:opacity-100 transition-opacity duration-700 ease-in-out"></span>
@@ -67,7 +67,7 @@ export default function Hero() {
                 <span className="absolute inset-0 -translate-x-full group-hover/hero:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent"></span>
                 {/* Button text */}
                 <span className="relative z-10 group-hover/hero:text-white transition-colors duration-500 ease-in-out font-bold tracking-wide text-base md:text-lg">
-                  احجز استشارة
+                  احجز استشارة قانونية
                 </span>
                 {/* Decorative border */}
                 <span className="absolute inset-0 rounded-2xl border-2 border-navy opacity-0 group-hover/hero:opacity-100 scale-105 transition-all duration-700 ease-out"></span>

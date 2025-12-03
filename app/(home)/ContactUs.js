@@ -133,7 +133,7 @@ export default function ContactUsForm() {
           <p className="text-lg text-navy/80 max-w-2xl mx-auto leading-relaxed">
             نحن هنا للإجابة على استفساراتكم وتقديم الاستشارات القانونية المتخصصة
           </p>
-          <div className="w-24 h-1.5 bg-gradient-to-r from-gold to-gold-light mx-auto mt-8 rounded-full shadow-sm"></div>
+          <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto rounded-full mt-8"></div>
         </div>
 
         {/* Contact Form Card */}

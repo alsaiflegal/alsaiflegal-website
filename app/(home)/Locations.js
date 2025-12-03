@@ -22,12 +22,10 @@ export default function OfficeLocation() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-end">
           <div className="pointer-events-auto w-full max-w-md animate-[fadeInUp_1s_ease-out_0.3s_forwards] opacity-0">
             <div className="bg-white/95 backdrop-blur-xl rounded-3xl p-8 md:p-10 shadow-2xl border border-gold/20 hover:shadow-gold/10 transition-all duration-500 hover:-translate-y-1">
-              {/* Decorative Top Border */}
-              <div className="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold rounded-t-3xl"></div>
 
               {/* Title */}
               <h3 className="text-3xl font-bold text-navy mb-8 relative">
-                <span className="relative z-10">المكتب الرئيسي – الرس</span>
+                <span className="relative z-10">مكتب الرس</span>
                 <div className="absolute -top-2 -right-2 w-12 h-12 bg-gold/10 rounded-full -z-0"></div>
               </h3>
 

@@ -19,7 +19,7 @@ export default function Blog() {
                     <p className="text-lg md:text-xl text-navy/80 font-light max-w-2xl mx-auto">
                         مقالات وتحليلات قانونية متخصصة
                     </p>
-                    <div className="w-24 h-1.5 bg-gradient-to-r from-gold to-gold-light mx-auto mt-8 rounded-full shadow-sm"></div>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-transparent via-gold to-transparent mx-auto rounded-full mt-8"></div>
                 </div>
 
                 {/* Blog Posts Grid */}

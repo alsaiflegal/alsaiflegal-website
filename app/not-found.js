@@ -88,15 +88,19 @@ export default function NotFound() {
                     <p className="text-white/60 mb-4 text-sm">أو يمكنك زيارة:</p>
                     <div className="flex flex-wrap gap-4 justify-center">
                         <Link href="/#about" className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium">
-                            عن المكتب
+                            عن الشركة
                         </Link>
                         <span className="text-white/30">•</span>
                         <Link href="/#services" className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium">
                             الخدمات
                         </Link>
                         <span className="text-white/30">•</span>
-                        <Link href="/#location" className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium">
-                            الموقع
+                        <Link href="/#blog" className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium">
+                            المدونة
+                        </Link>
+                        <span className="text-white/30">•</span>
+                        <Link href="/#contact" className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium">
+                            تواصل معنا
                         </Link>
                     </div>
                 </div>

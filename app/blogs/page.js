@@ -40,21 +40,21 @@ export default function BlogPage() {
                             المدونة القانونية
                         </h1>
                         <p className="text-xl text-white/90 max-w-2xl mx-auto animate-[fadeInUp_1s_ease-out_0.2s_forwards] opacity-0 font-medium">
-                            مقالات وتحليلات قانونية متخصصة من فريق مكتب السيف للمحاماة
+                            مقالات وتحليلات قانونية متخصصة من فريق شركة إبراهيم بن عبدالعزيز السيف للمحاماة
                         </p>
                         <div className="w-24 h-1.5 bg-gradient-to-r from-gold to-gold-light mx-auto mt-8 rounded-full shadow-sm animate-[fadeInUp_1s_ease-out_0.4s_forwards] opacity-0"></div>
                     </div>
                 </section>
 
                 {/* Category Filter */}
-                <section className="sticky top-24 z-40 bg-white/95 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+                <section className="bg-white/95 backdrop-blur-xl">
                     <div className="max-w-7xl mx-auto px-4 py-6">
                         <div className="flex flex-wrap gap-3 justify-center">
                             {categories.map((category) => (
                                 <button
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
-                                    className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
+                                    className={`px-6 py-2.5 rounded-full font-semibold transition-all duration-300 cursor-pointer ${selectedCategory === category
                                         ? "bg-gradient-to-r from-gold to-gold-light text-white shadow-lg scale-105"
                                         : "bg-gray-100 text-navy hover:bg-gold/10 hover:text-gold"
                                         }`}
