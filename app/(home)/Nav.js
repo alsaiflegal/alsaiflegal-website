@@ -4,16 +4,19 @@ import { useState, useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   // Handle Cal
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ "namespace": "30min" });
       cal("ui", { "theme": "light", "cssVarsPerTheme": { "light": { "cal-brand": "#2e3af4" } }, "hideEventTypeDetails": false, "layout": "month_view" });
-    })();
+    })()
   }, [])
 
 
@@ -32,11 +35,28 @@ export default function Header() {
   const navLinks = [
     { href: "#about", label: "عن المكتب" },
     { href: "#services", label: "الخدمات" },
+    { href: "/blogs", label: "المدونة" },
     { href: "#contact", label: "تواصل معنا" },
   ];
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
+
+    // If it's the blogs link, just navigate normally
+    if (href === "/blogs") {
+      router.push(href);
+      setIsMenuOpen(false);
+      return;
+    }
+
+    // If we're not on the home page and it's an anchor link, redirect to home with anchor
+    if (pathname !== "/" && href.startsWith("#")) {
+      router.push(`/${href}`);
+      setIsMenuOpen(false);
+      return;
+    }
+
+    // If we're on the home page, scroll to the element
     const element = document.querySelector(href);
     if (element) {
       const offset = 100; // Account for fixed header
