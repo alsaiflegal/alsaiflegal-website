@@ -36,11 +36,11 @@ export default function Hero() {
               style={{ animationDelay: "0.3s" }}
             >
               <Image
-                src="/images/logos/logo_and_name_horizontal_white.png"
+                src="/images/logos/logo_and_name_horizontal_black.png"
                 alt="logo"
                 width={800}
                 height={800}
-                className="w-64 sm:w-80 md:w-[30rem] lg:w-[40rem] 2xl:w-[50rem] h-auto drop-shadow-2xl"
+                className="w-64 sm:w-80 md:w-[30rem] lg:w-[40rem] 2xl:w-[50rem] h-auto drop-shadow-2xl brightness-0 invert"
               />
             </div>
             {/* Slogan */}

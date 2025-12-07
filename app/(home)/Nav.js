@@ -96,9 +96,9 @@ export default function Header() {
                 className="text-xl lg:text-2xl font-bold text-navy hover:text-gold transition-all duration-300 drop-shadow-sm hover:scale-105"
               >
                 <Image
-                  src="/images/logos/logo_and_name_horizontal_black.png"
+                  src="/images/logos/logo_and_name_horizontal.png"
                   alt="logo"
-                  className="filter invert-0 sepia-100 hue-rotate-180 saturate-500"
+                  className=""
                   width={210}
                   height={200}
                 />

@@ -47,7 +47,7 @@ export default function BlogPage() {
                 </section>
 
                 {/* Category Filter */}
-                <section className="bg-white/95 backdrop-blur-xl">
+                <section>
                     <div className="max-w-7xl mx-auto px-4 py-6">
                         <div className="flex flex-wrap gap-3 justify-center">
                             {categories.map((category) => (

@@ -25,7 +25,7 @@ export default function LinktreePage() {
       subtitle: "اتصل بنا مباشرة",
       icon: "phone",
       url: "tel:+966505778919",
-      color: "blue",
+      color: "navy",
     },
     {
       id: 3,
@@ -41,7 +41,7 @@ export default function LinktreePage() {
       subtitle: "راسلنا عبر البريد الإلكتروني",
       icon: "email",
       url: "mailto:info@alsaiflegal.com",
-      color: "blue",
+      color: "navy",
     },
     {
       id: 5,
@@ -57,7 +57,7 @@ export default function LinktreePage() {
       subtitle: "آخر الأخبار والتحديثات",
       icon: "x",
       url: "https://x.com/alsaif_legal",
-      color: "blue",
+      color: "navy",
     },
     {
       id: 7,
@@ -111,12 +111,12 @@ export default function LinktreePage() {
 
   return (
     <div
-      className="min-h-screen bg-midnight relative overflow-hidden"
+      className="min-h-screen bg-gray-50 relative overflow-hidden"
       dir="rtl"
     >
       {/* Decorative Background Elements */}
-      <div className="absolute -top-30 -left-30 w-120 h-120 bg-gold opacity-10 rounded-full blur-3xl"></div>
-      {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue/20 opacity-5 rounded-full blur-3xl"></div> */}
+      <div className="absolute -top-30 -left-30 w-120 h-120 bg-gold/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-navy/5 rounded-full blur-3xl"></div>
 
       {/* Main Content Container */}
       <div className="relative z-10 max-w-2xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -128,16 +128,17 @@ export default function LinktreePage() {
           {/* Firm Name */}
           <div className="mb-3 mt-9">
             <Image
-              src="/images/logos/logo_and_name_horizontal_white.png"
+              src="/images/logos/logo_and_name_horizontal.png"
               alt="logo"
-              className="filter invert-0 sepia-100 hue-rotate-180 saturate-500 object-cover object-right"
+              className="object-cover object-right"
               width={400}
               height={250}
+              priority
             />
           </div>
 
           {/* Tagline */}
-          <p className="text-platinum text-base sm:text-lg md:text-xl max-w-xl mx-auto">
+          <p className="text-navy text-base sm:text-lg md:text-xl max-w-xl mx-auto font-medium">
             خبرة قانونية متميزة <span className="text-gold mx-2">|</span>{" "}
             استشارات موثوقة <span className="text-gold mx-2">|</span> حلول
             قانونية شاملة
@@ -172,20 +173,20 @@ export default function LinktreePage() {
               <div
                 className={`
                 relative overflow-hidden
-                bg-gradient-to-br from-[#5A6BAF]/10 to-midnight
-                border-2 ${link.color === "gold"
+                bg-white
+                border ${link.color === "gold"
                     ? "border-gold/30"
-                    : "border-[#5A6BAF]/30"
+                    : "border-navy/10"
                   }
                 rounded-2xl p-5 sm:p-6
                 transition-all duration-300
-                hover:scale-[1.02] hover:shadow-2xl
+                hover:scale-[1.02] hover:shadow-xl
                 ${link.color === "gold"
-                    ? "hover:shadow-gold/20"
-                    : "hover:shadow-[#5A6BAF]/20"
+                    ? "hover:shadow-gold/10"
+                    : "hover:shadow-navy/10"
                   }
-                hover:border-${link.color}
-                backdrop-blur-sm
+                hover:border-${link.color === 'blue' ? 'navy' : link.color}
+                shadow-sm
               `}
               >
                 {/* Hover Glow Effect */}
@@ -194,7 +195,7 @@ export default function LinktreePage() {
                   absolute inset-0 opacity-0 group-hover:opacity-100
                   bg-gradient-to-r ${link.color === "gold"
                       ? "from-gold/5 to-transparent"
-                      : "from-[#5A6BAF]/5 to-transparent"
+                      : "from-navy/5 to-transparent"
                     }
                   transition-opacity duration-300
                 `}
@@ -209,13 +210,13 @@ export default function LinktreePage() {
                     rounded-xl
                     bg-gradient-to-br ${link.color === "gold"
                         ? "from-gold/20 to-gold/5"
-                        : "from-[#5A6BAF]/20 to-[#5A6BAF]/5"
+                        : "from-navy/10 to-transparent" // lighter navy bg
                       }
                     flex items-center justify-center
-                    ${link.color === "gold" ? "text-gold" : "text-[#5A6BAF]"}
+                    ${link.color === "gold" ? "text-gold" : "text-navy"}
                     transition-all duration-300
                     group-hover:scale-110 group-hover:rotate-3
-                    group-hover:text-ivory
+                    group-hover:text-navy
                   `}
                   >
                     {getIcon(link.icon)}
@@ -226,14 +227,14 @@ export default function LinktreePage() {
                     <h3
                       className={`
                       text-lg sm:text-xl font-bold mb-1
-                      ${link.color === "gold" ? "text-gold" : "text-[#5A6BAF]"}
-                      group-hover:text-ivory
+                      ${link.color === "gold" ? "text-gold" : "text-navy"}
+                      group-hover:text-navy
                       transition-colors duration-300
                     `}
                     >
                       {link.title}
                     </h3>
-                    <p className="text-platinum text-sm sm:text-base">
+                    <p className="text-gray-500 text-sm sm:text-base group-hover:text-gray-700 transition-colors">
                       {link.subtitle}
                     </p>
                   </div>
@@ -243,16 +244,16 @@ export default function LinktreePage() {
                     className={`
                     flex-shrink-0 w-8 h-8
                     rounded-full
-                    ${link.color === "gold" ? "bg-gold/10" : "bg-[#5A6BAF]/10"}
+                    ${link.color === "gold" ? "bg-gold/10" : "bg-navy/5"}
                     flex items-center justify-center
                     transition-all duration-300
-                    group-hover:bg-${link.color}
+                    ${link.color === "gold" ? "group-hover:bg-gold" : "group-hover:bg-navy"}
                     group-hover:-translate-x-1
                   `}
                   >
                     <svg
-                      className={`w-4 h-4 ${link.color === "gold" ? "text-gold" : "text-[#5A6BAF]"
-                        } group-hover:text-midnight transition-colors duration-300`}
+                      className={`w-4 h-4 ${link.color === "gold" ? "text-gold" : "text-navy"
+                        } group-hover:text-white transition-colors duration-300`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -271,7 +272,7 @@ export default function LinktreePage() {
                 <div
                   className={`
                   absolute bottom-0 right-0 h-1 w-0
-                  ${link.color === "gold" ? "bg-gold" : "bg-[#5A6BAF]"}
+                  ${link.color === "gold" ? "bg-gold" : "bg-navy"}
                   transition-all duration-500
                   group-hover:w-full
                 `}
@@ -293,3 +294,4 @@ export default function LinktreePage() {
     </div>
   );
 }
+
