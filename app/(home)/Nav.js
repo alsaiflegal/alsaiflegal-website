@@ -35,7 +35,7 @@ export default function Header() {
   const navLinks = [
     { href: "#about", label: "عن الشركة" },
     { href: "#services", label: "الخدمات" },
-    { href: "#blog", label: "المدونة" },
+    // { href: "#blog", label: "المدونة" },
     { href: "#contact", label: "تواصل معنا" },
   ];
 
@@ -106,8 +106,8 @@ export default function Header() {
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center justify-center flex-1 px-12">
-              <div className="flex items-center space-x-8">
+            <div className="hidden lg:flex items-center justify-end flex-1 px-12">
+              <div className="flex items-center gap-8">
                 {navLinks.map((link) => (
                   <a
                     key={link.href}
@@ -122,28 +122,24 @@ export default function Header() {
             </div>
 
             {/* Desktop CTA Button */}
-            <div className="hidden lg:block relative group/nav">
+            {/* <div className="hidden lg:block relative group/nav">
               <button
                 data-cal-namespace="30min"
                 data-cal-link="alsaif-legal-k7e91v/30min"
                 data-cal-config='{"layout":"month_view"}'
                 className="relative inline-block bg-gradient-to-br from-navy to-navy-light text-white px-8 py-3 rounded-full font-semibold overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer"
               >
-                {/* Animated gradient overlay */}
                 <span className="absolute inset-0 bg-gradient-to-br from-gold via-gold-light to-gold opacity-0 group-hover/nav:opacity-100 transition-opacity duration-500"></span>
 
-                {/* Shimmer effect */}
                 <span className="absolute inset-0 -translate-x-full group-hover/nav:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></span>
 
-                {/* Button text */}
                 <span className="relative z-10 group-hover/nav:text-navy transition-colors duration-300 font-bold tracking-wide">
                   احجز استشارة
                 </span>
 
-                {/* Decorative border */}
                 <span className="absolute inset-0 rounded-full border-2 border-gold opacity-0 group-hover/nav:opacity-100 scale-105 transition-all duration-500"></span>
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
             <button
@@ -220,28 +216,24 @@ export default function Header() {
           </div>
 
           {/* Mobile CTA Button  */}
-          <div className="relative group/mobile">
+          {/* <div className="relative group/mobile">
             <button
               data-cal-namespace="30min"
               data-cal-link="alsaif-legal-k7e91v/30min"
               data-cal-config='{"layout":"month_view"}'
               className="relative inline-block bg-gradient-to-br from-navy to-navy-light text-white px-8 py-3 rounded-full font-semibold overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer"
             >
-              {/* Animated gradient overlay */}
               <span className="absolute inset-0 bg-gradient-to-br from-gold via-gold-light to-gold opacity-0 group-hover/mobile:opacity-100 transition-opacity duration-500"></span>
 
-              {/* Shimmer effect */}
               <span className="absolute inset-0 -translate-x-full group-hover/mobile:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent"></span>
 
-              {/* Button text */}
               <span className="relative z-10 group-hover/mobile:text-navy transition-colors duration-300 font-bold tracking-wide">
                 احجز استشارة
               </span>
 
-              {/* Decorative border */}
               <span className="absolute inset-0 rounded-full border-2 border-gold opacity-0 group-hover/mobile:opacity-100 scale-105 transition-all duration-500"></span>
             </button>
-          </div>
+          </div> */}
 
           {/* Decorative Glass Element */}
           <div

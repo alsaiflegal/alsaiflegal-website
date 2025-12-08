@@ -70,21 +70,58 @@ export default function ServicesBento() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
         </svg>
       ),
+      criminal: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      ),
+      training: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      ),
+      medical: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+        </svg>
+      ),
     };
     return icons[type] || icons.consultation;
   };
 
   const services = [
+    // الخدمات (Services) - Core offerings
+    {
+      icon: "consultation",
+      title: "الاستشارات القانونية",
+      description: "استشارات قانونية شاملة ومتخصصة في مختلف المجالات"
+    },
+    {
+      icon: "contracts",
+      title: "صياغة العقود",
+      description: "إعداد ومراجعة العقود التجارية والقانونية"
+    },
     {
       icon: "litigation",
       title: "التقاضي والمرافعات",
       description: "تمثيل قانوني متميز أمام المحاكم والهيئات القضائية بكافة درجاتها"
     },
     {
-      icon: "consultation",
-      title: "الاستشارات القانونية",
-      description: "استشارات قانونية شاملة ومتخصصة في مختلف المجالات"
+      icon: "criminal",
+      title: "القضايا الجزائية",
+      description: "نكون لك سند في كافة مراحل المحاكمة الجنائية، منذُ بدءها حتى انتهاءها بجودة عمل وتوفير كافة ضمانات المتهم"
     },
+    {
+      icon: "training",
+      title: "التدريب والتطوير",
+      description: "تسعى الشركة لإعداد وتطوير الكوادر القانونية، وإنشاء وتطوير الادارات القانونية في الشركات والمنشآت الحكومية والشبه حكومية"
+    },
+    {
+      icon: "medical",
+      title: "قضايا الأخطاء الطبية",
+      description: "نقدم الاستشارات والترافع في القضايا الطبية"
+    },
+    // مجالات العمل (Practice Areas)
     {
       icon: "company",
       title: "الشركات التجارية",
@@ -122,7 +159,7 @@ export default function ServicesBento() {
     },
     {
       icon: "labor",
-      title: "قانون العمل",
+      title: "نظام العمل",
       description: "استشارات في علاقات العمل وحل النزاعات العمالية"
     },
     {
@@ -134,21 +171,23 @@ export default function ServicesBento() {
       icon: "banking",
       title: "الخدمات المصرفية والمالية",
       description: "استشارات في المعاملات المصرفية والتمويل"
-    },
-    {
-      icon: "contracts",
-      title: "صياغة العقود",
-      description: "إعداد ومراجعة العقود التجارية والقانونية"
     }
   ];
 
   return (
     <section
-      className="w-full py-32 bg-white"
+      className="w-full py-32 bg-white relative overflow-hidden"
       dir="rtl"
       id="services"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Decorative Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full">
+        <div className="absolute top-40 left-20 w-80 h-80 bg-navy/[0.02] rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-gold/[0.03] rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-gold/[0.02] rounded-full blur-2xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         {/* Header */}
         <div className="text-center mb-20 animate-[fadeInUp_1s_ease-out_forwards]">
@@ -166,14 +205,16 @@ export default function ServicesBento() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-3 border border-gray-100 hover:border-gold/50 animate-[fadeInUp_0.8s_ease-out_forwards] opacity-0 overflow-hidden"
+              className="group relative bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-4 hover:rotate-[0.3deg] border border-gray-100 hover:border-gold/50 animate-[fadeInUp_0.8s_ease-out_forwards] opacity-0 overflow-hidden"
               style={{ animationDelay: `${index * 0.05}s` }}
             >
               {/* Background glow */}
               <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              {/* Corner accent */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-gold/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               {/* Icon Container */}
-              <div className="relative z-10 w-16 h-16 rounded-xl bg-navy/10 flex items-center justify-center mb-5 group-hover:bg-gold group-hover:scale-110 group-hover:-translate-y-1 transition-all duration-500">
+              <div className="relative z-10 w-16 h-16 rounded-xl bg-navy/10 flex items-center justify-center mb-5 group-hover:bg-gold group-hover:scale-110 group-hover:-translate-y-1 group-hover:shadow-lg group-hover:shadow-gold/20 group-hover:rotate-3 transition-all duration-500">
                 <div className="text-navy group-hover:text-white transition-colors duration-500">
                   <ServiceIcon type={service.icon} />
                 </div>
@@ -185,7 +226,7 @@ export default function ServicesBento() {
               </h3>
 
               {/* Description */}
-              <p className="text-navy/70 leading-relaxed text-sm">
+              <p className="text-navy/70 leading-relaxed text-sm group-hover:text-navy/80 transition-colors duration-300">
                 {service.description}
               </p>
 

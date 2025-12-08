@@ -61,8 +61,8 @@ export default function LinktreePage() {
     },
     {
       id: 7,
-      title: "مكتب الرس",
-      subtitle: "شارع الجريف الرس",
+      title: "مقرنا",
+      subtitle: "موقع مقر الشركة",
       icon: "location",
       url: "https://maps.app.goo.gl/zQnc5kJenQ2X1Jev7?g_st=ipc",
       color: "gold",
@@ -128,10 +128,10 @@ export default function LinktreePage() {
           {/* Firm Name */}
           <div className="mb-3 mt-9">
             <Image
-              src="/images/logos/logo_and_name_horizontal.png"
+              src="/images/logos/logo_and_name_vertical.png"
               alt="logo"
               className="object-cover object-right"
-              width={400}
+              width={300}
               height={250}
               priority
             />

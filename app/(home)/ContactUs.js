@@ -144,7 +144,7 @@ export default function ContactUsForm() {
 
             <div className="space-y-8" onKeyPress={handleKeyPress}>
               {/* Name Field */}
-              <div className="transform transition-all duration-300 hover:translate-x-1">
+              <div className="transform transition-all duration-300">
                 <label htmlFor="name" className="block text-sm font-bold text-navy mb-2 tracking-wide">
                   الاسم الكامل <span className="text-gold">*</span>
                 </label>
@@ -167,7 +167,7 @@ export default function ContactUsForm() {
               </div>
 
               {/* Phone Field */}
-              <div className="transform transition-all duration-300 hover:translate-x-1">
+              <div className="transform transition-all duration-300">
                 <label htmlFor="phone" className="block text-sm font-bold text-navy mb-2 tracking-wide">
                   رقم الهاتف <span className="text-gold">*</span>
                 </label>
@@ -191,7 +191,7 @@ export default function ContactUsForm() {
               </div>
 
               {/* Subject Field */}
-              <div className="transform transition-all duration-300 hover:translate-x-1">
+              <div className="transform transition-all duration-300">
                 <label htmlFor="subject" className="block text-sm font-bold text-navy mb-2 tracking-wide">
                   الموضوع <span className="text-gold">*</span>
                 </label>
@@ -214,7 +214,7 @@ export default function ContactUsForm() {
               </div>
 
               {/* Message Field */}
-              <div className="transform transition-all duration-300 hover:translate-x-1">
+              <div className="transform transition-all duration-300">
                 <label htmlFor="message" className="block text-sm font-bold text-navy mb-2 tracking-wide">
                   الرسالة <span className="text-gold">*</span>
                 </label>
@@ -242,7 +242,7 @@ export default function ContactUsForm() {
                   onClick={handleSubmit}
                   disabled={isSubmitting}
                   className={`w-full py-5 px-8 rounded-xl font-bold text-lg text-white
-                    transition-all duration-300 ease-in-out tracking-wide
+                    transition-all duration-300 ease-in-out tracking-wide cursor-pointer
                     transform hover:scale-[1.01] active:scale-[0.99]
                     shadow-xl hover:shadow-2xl overflow-hidden relative group
                     ${isSubmitting
