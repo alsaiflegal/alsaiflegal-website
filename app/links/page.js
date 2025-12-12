@@ -216,7 +216,6 @@ export default function LinktreePage() {
                     ${link.color === "gold" ? "text-gold" : "text-navy"}
                     transition-all duration-300
                     group-hover:scale-110 group-hover:rotate-3
-                    group-hover:text-navy
                   `}
                   >
                     {getIcon(link.icon)}
@@ -228,7 +227,6 @@ export default function LinktreePage() {
                       className={`
                       text-lg sm:text-xl font-bold mb-1
                       ${link.color === "gold" ? "text-gold" : "text-navy"}
-                      group-hover:text-navy
                       transition-colors duration-300
                     `}
                     >
