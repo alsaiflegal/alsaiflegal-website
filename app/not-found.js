@@ -20,15 +20,15 @@ export default function NotFound() {
       </div>
 
       {/* Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto text-center">
+      <div className="relative z-10 max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <div className="mb-12 animate-[fadeInScale_1s_ease-out_forwards] opacity-0">
           <Image
-            src="/images/logos/logo_and_name_horizontal_black.png"
+            src="/images/logos/logo_and_name_vertical_black.png"
             alt="logo"
-            width={400}
-            height={400}
-            className="w-64 sm:w-80 md:w-96 h-auto mx-auto drop-shadow-2xl brightness-0 invert"
+            width={600}
+            height={600}
+            className="w-48 sm:w-56 md:w-64 h-auto mx-auto drop-shadow-2xl brightness-0 invert"
           />
         </div>
 
@@ -126,7 +126,7 @@ export default function NotFound() {
             >
               الخدمات
             </Link>
-            <span className="text-white/30">•</span>
+            {/* <span className="text-white/30">•</span>
             <Link
               href="/#blog"
               className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium"
@@ -139,7 +139,7 @@ export default function NotFound() {
               className="text-gold hover:text-gold-light transition-colors duration-300 text-sm font-medium"
             >
               تواصل معنا
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
