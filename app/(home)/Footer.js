@@ -89,7 +89,7 @@ export default function Footer() {
                   </svg>
                 </div>
                 <a href="https://snapchat.com/t/LvW3zUtv" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors duration-300 text-lg">
-                  alsaif_law
+                  alsaif_legal
                 </a>
               </div>
             </div>
