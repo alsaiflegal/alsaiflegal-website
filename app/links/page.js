@@ -48,7 +48,7 @@ export default function LinktreePage() {
       title: "سناب شات",
       subtitle: "شاهد لحظاتنا اليومية",
       icon: "snapchat",
-      url: "https://snapchat.com/t/MiUFEfZH",
+      url: "https://snapchat.com/t/LvW3zUtv",
       color: "gold",
     },
     {

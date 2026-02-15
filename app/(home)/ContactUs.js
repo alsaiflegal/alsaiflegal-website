@@ -71,8 +71,8 @@ export default function ContactUsForm() {
     setIsSubmitting(true)
 
     try {
-      // Send to n8n webhook
-      const response = await fetch('https://workflows.ibrlabs.dev/webhook/contact-us', {
+      // Send via email API route
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -82,7 +82,6 @@ export default function ContactUsForm() {
           phone: formData.phone,
           subject: formData.subject,
           message: formData.message,
-          timestamp: new Date().toISOString(),
         }),
       })
 
